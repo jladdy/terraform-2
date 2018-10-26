@@ -14,6 +14,6 @@ Route53 records will be added. This will not create the Route53 zone itself.
 
 This file includes all the variables used by prov.tf. 
 
-### prof.tfvars
+### prod.tfvars
 
 This file contains the connection information for AWS and Chef. 
