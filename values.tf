@@ -1,7 +1,7 @@
 provider "aws" {
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
-  region     = "${var.region}"
+  access_key = var.access_key
+  secret_key = var.secret_key
+  region     = var.region
 }
 
 variable "access_key" {}
@@ -15,7 +15,7 @@ variable "region" {}
 
 variable "zone" {
   description = "Run the EC2 Instances in these Availability Zones"
-  type = "list"
+  type = list
   default = [
               "us-east-1a",
               "us-east-1b",
@@ -26,8 +26,8 @@ variable "zone" {
               ]
 }
 
-variable "base" {
-  default = "sg-abc123"
+variable "sg-base" {
+  default = "sg-094f332f78af153ba"
 }
 
 variable "ssh_user" {
@@ -35,7 +35,7 @@ variable "ssh_user" {
 }
 
 variable "instance_type" {
-    default = "t2.micro"
+    default = "t3.micro"
 }
 
 variable "root_device_type" {
